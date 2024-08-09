@@ -6,7 +6,16 @@
 		<Nullable>enable</Nullable>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="EPiServer.CMS" Version="12.29.0" />
+		<PackageReference Include="EPiServer.CMS" Version="12.31.0" />
 		<PackageReference Include="EPiServer.Commerce" Version="14.15.3" />
+		<PackageReference Include="Serilog" Version="4.0.1" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Features\BlogCatalog\" />
+	  <Folder Include="Features\Blog\" />
+	  <Folder Include="Features\Catalog\" />
+	  <Folder Include="Features\CategoriesCatalog\" />
+	  <Folder Include="Features\Category\" />
+	  <Folder Include="Features\Product\" />
 	</ItemGroup>
 </Project>

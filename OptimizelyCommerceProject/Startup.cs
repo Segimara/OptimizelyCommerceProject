@@ -2,8 +2,10 @@ using EPiServer.Cms.Shell;
 using EPiServer.Cms.UI.AspNetIdentity;
 using EPiServer.Scheduler;
 using EPiServer.ServiceLocation;
+using EPiServer.Web;
 using EPiServer.Web.Routing;
 using Mediachase.Commerce.Anonymous;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace OptimizelyCommerceProject;
 public class Startup
@@ -30,6 +32,8 @@ public class Startup
             .AddCommerce()
             .AddAdminUserRegistration()
             .AddEmbeddedLocalization<Startup>();
+
+        services.TryAddEnumerable(Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Singleton(typeof(IFirstRequestInitializer), typeof(UsersInstaller)));
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -48,6 +52,8 @@ public class Startup
 
         app.UseEndpoints(endpoints =>
         {
+            endpoints.MapControllerRoute(name: "Default", pattern: "{controller}/{action}/{id?}");
+            endpoints.MapControllers();
             endpoints.MapContent();
         });
     }
