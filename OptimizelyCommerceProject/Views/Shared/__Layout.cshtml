@@ -1,13 +1,15 @@
-﻿@model IPageViewModel<SitePageData>
+﻿@using OptimizelyCommerceProject.Core.Features.Components.Header
 
 <!DOCTYPE html>
-<html lang="@(Model.CurrentPage.Language)">
+@* TODO add lang to root html tag *@
+<html>
 <head>
 </head>
 
 <body>
+      @(await Component.InvokeAsync<HeaderViewComponent>())
     <div class="container">
-        
+        @RenderBody()
     </div>
     <script src="~/Scripts/jquery-3.1.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>

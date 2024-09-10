@@ -17,7 +17,7 @@ public class BasePageController<T> : PageController<T> where T : PageData
         return View(currentPage);
     }
 
-    public ViewResult View(T currentPage)
+    public ViewResult View<PageT>(PageT currentPage) where PageT : class
     {
         var viewPath = string.Format(DefaultViewPathTemplate, currentPage.GetOriginalType().Name);
         return base.View(viewPath, currentPage);

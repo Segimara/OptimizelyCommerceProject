@@ -5,6 +5,7 @@ using EPiServer.SpecializedProperties;
 using OptimizelyCommerceProject.Core.Constants;
 using OptimizelyCommerceProject.Core.Features.Common.Models;
 using OptimizelyCommerceProject.Core.Features.SEO;
+using OptimizelyCommerceProject.Core.Features.Settings;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -22,7 +23,7 @@ namespace OptimizelyCommerceProject.Core.Features.HomePage.Models;
 [AvailableContentTypes(
     Availability = Availability.Specific,
     Include = new[] { 
-        typeof(SiteSettings.SiteSettings),
+        typeof(SiteSettings),
         typeof(ContentPage.Models.ContentPage), 
     })]
 public class HomePage : BasePageModel

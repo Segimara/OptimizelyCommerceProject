@@ -23,6 +23,6 @@ public class NavigationService : INavogationService
     private readonly IContentRepository _contentRepository;
     public NavigationViewModel GetNavigationViewModel()
     {
-        var currentContent = _contentRepository.Get<NavigationNode>(ContentReference.);
+        return null;
     }
 }

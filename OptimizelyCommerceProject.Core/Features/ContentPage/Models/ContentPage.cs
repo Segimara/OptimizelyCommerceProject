@@ -4,7 +4,6 @@ using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using OptimizelyCommerceProject.Core.Constants;
 using OptimizelyCommerceProject.Core.Features.Common.Models;
-using OptimizelyCommerceProject.Core.Features.Navigation.Header;
 using OptimizelyCommerceProject.Core.Features.SEO;
 using System.ComponentModel.DataAnnotations;
 
