@@ -29,4 +29,16 @@ public class SiteSettings : PageData
         Order = 100)]
     [CultureSpecific]
     public virtual string SiteName { get; set; }
+
+    [Display(
+        GroupName = Globals.PropertyGroupNames.SiteSettings,
+        Order = 200)]
+    [CultureSpecific]
+    public virtual ContentReference HeaderSettings { get; set; }
+
+    [Display(
+        GroupName = Globals.PropertyGroupNames.SiteSettings,
+        Order = 300)]
+    [CultureSpecific]
+    public virtual ContentReference FooterSettings { get; set; }
 }

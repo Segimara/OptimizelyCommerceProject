@@ -1,4 +1,7 @@
-﻿using EPiServer.DataAbstraction;
+﻿using EPiServer;
+using EPiServer.Cms.Shell.UI.Rest.Internal;
+using EPiServer.Core;
+using EPiServer.DataAbstraction;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +16,11 @@ public interface ISettingsService
 }
 internal class SettingsService : ISettingsService
 {
-    private readonly ContentRootService _contentRootService;
+    private readonly IContentRepository _contentRepository;
 
-    public void InitSettigs()
+    public SiteSettings GetSiteSettings()
     {
-        
+        var siteSettings = _contentRepository.Get<SiteSettings>(ContentReference.RootPage);
+        return siteSettings;
     }
 }
