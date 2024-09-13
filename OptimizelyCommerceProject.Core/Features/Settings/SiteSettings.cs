@@ -18,7 +18,7 @@ namespace OptimizelyCommerceProject.Core.Features.Settings;
     GroupName = Globals.PageGroupNames.SiteSettings)]
 [AvailableContentTypes(Availability = Availability.Specific,
     Include = new[] {
-        typeof(Header),
+        typeof(HeaderModel),
         typeof(Footer),
     }
     )]

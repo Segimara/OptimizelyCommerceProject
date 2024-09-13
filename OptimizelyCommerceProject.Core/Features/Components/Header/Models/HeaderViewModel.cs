@@ -9,4 +9,5 @@ namespace OptimizelyCommerceProject.Core.Features.Components.Header.Models;
 public class HeaderViewModel
 {
     public NavigationViewModel? Navigation { get; set; }
+    public Hea
 }

@@ -17,7 +17,7 @@ namespace OptimizelyCommerceProject.Core.Features.Common.Header;
     GroupName = Globals.PageGroupNames.Default)]
 [AvailableContentTypes(Availability.Specific
     )]
-public class Header : PageData
+public class HeaderModel : PageData
 {
     [Display(
         GroupName = SystemTabNames.Content,
